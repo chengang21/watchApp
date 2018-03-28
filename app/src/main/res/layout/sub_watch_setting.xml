@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <LinearLayout
+            android:id="@+id/notify_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6.0dip"
+                android:gravity="center"
+                android:paddingLeft="14.0dip"
+                android:paddingRight="14.0dip"
+                android:text="@string/watch_sets_notify"
+                android:textColor="#ff515050"
+                android:textSize="18.0sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@color/separator_line"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="14.0dip">
+
+                <TextView
+                    android:id="@+id/notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="36.0dip"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/menu_item_right1"
+                    android:src="@drawable/icon_arrow_right" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <LinearLayout
+            android:id="@+id/volume_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_item_height"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6.0dip"
+                android:gravity="center"
+                android:paddingLeft="14.0dip"
+                android:paddingRight="14.0dip"
+                android:text="@string/watch_sets_volume"
+                android:textColor="#ff515050"
+                android:textSize="18.0sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@color/separator_line"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="14.0dip">
+
+                <TextView
+                    android:id="@+id/volume_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="36.0dip"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/menu_item_right1"
+                    android:src="@drawable/icon_arrow_right" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/contacts_item_height"
+            android:background="@drawable/layout_item_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6.0dip"
+                android:gravity="center"
+                android:paddingLeft="14.0dip"
+                android:paddingRight="14.0dip"
+                android:text="@string/watch_sets_save_power"
+                android:textColor="#ff515050"
+                android:textSize="18.0sp" />
+
+            <com.duoker.watch.ui.view.SwitchButton
+                android:id="@+id/save_power_tb"
+                android:layout_width="50.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:checked="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:textOff=""
+                android:textOn=""
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswBackMeasureRatio="1.6"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-8.0dip"
+                app:kswThumbMarginLeft="-5.0dip"
+                app:kswThumbMarginRight="-5.0dip"
+                app:kswThumbMarginTop="-2.5dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

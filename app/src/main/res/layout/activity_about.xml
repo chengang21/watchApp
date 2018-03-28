@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lc_layout_default_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.duoker.watch.ui.activity.AboutActivity">
+
+    <com.duoker.watch.ui.view.MyToolbar
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/colorToolbar_bg">
+
+        <ImageView
+            android:id="@+id/toolbar_menu_back"
+            android:layout_width="@dimen/toolbar_item_width"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/toolbar_item_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/toolbar_title_tv"
+            style="@style/ToolbarStyle1.TitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/about_title" />
+    </com.duoker.watch.ui.view.MyToolbar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/version_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:gravity="center"
+            android:text="@string/duoker_app_version"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+</RelativeLayout>

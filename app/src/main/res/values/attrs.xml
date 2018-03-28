@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgress">
+        <attr name="ec_arc_progress" format="integer" />
+        <attr name="ec_arc_angle" format="float" />
+        <attr name="ec_arc_stroke_width" format="dimension" />
+        <attr name="ec_arc_max" format="integer" />
+        <attr name="ec_arc_unfinished_color" format="color" />
+        <attr name="ec_arc_finished_color" format="color" />
+        <attr name="ec_arc_content_text_size" format="dimension" />
+        <attr name="ec_arc_content_text_color" format="color" />
+        <attr name="ec_arc_suffix_text" format="string" />
+        <attr name="ec_arc_suffix_text_size" format="dimension" />
+        <attr name="ec_arc_suffix_text_padding" format="dimension" />
+        <attr name="ec_arc_target_text" format="string" />
+        <attr name="ec_arc_target_text_size" format="dimension" />
+        <attr name="ec_arc_name_text" format="string" />
+        <attr name="ec_arc_name_text_size" format="dimension" />
+        <attr name="ec_arc_other_text_color" format="color" />
+        <attr name="npb_numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingLayout">
+        <attr name="background_view" format="reference"/>
+        <attr name="sliding_mode" format="enum">
+            <enum name="both" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="bottom" value="2"/>
+        </attr>
+        <attr name="sliding_pointer_mode" format="enum">
+            <enum name="one" value="0"/>
+            <enum name="more" value="1"/>
+        </attr>
+        <attr name="top_max" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswBackMeasureRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextMarginH" format="dimension"/>
+        <attr name="kswAutoAdjustTextPosition" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LinearListView">
+        <attr name="android:entries"/>
+        <attr name="dividerThickness" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="androidWheelView">
+        <attr name="awv_textsize" format="integer" />
+        <attr name="awv_lineSpace" format="float" />
+        <attr name="awv_centerTextColor" format="integer" />
+        <attr name="awv_outerTextColor" format="integer" />
+        <attr name="awv_dividerTextColor" format="integer" />
+        <attr name="awv_itemsVisibleCount" format="integer" />
+        <attr name="awv_isLoop" format="boolean" />
+        <attr name="awv_initialPosition" format="integer" />
+        <attr name="awv_scaleX" format="float" />
+    </declare-styleable>
+
+</resources>
+

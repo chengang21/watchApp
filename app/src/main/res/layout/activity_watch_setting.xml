@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lc_layout_default_bg"
+    android:orientation="vertical">
+
+    <com.duoker.watch.ui.view.MyToolbar
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/colorToolbar_bg"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/toolbar_menu_back"
+            android:layout_width="@dimen/toolbar_item_width"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/toolbar_item_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            style="@style/ToolbarStyle1.TitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/watch_sets_title" />
+    </com.duoker.watch.ui.view.MyToolbar>
+
+    <com.duoker.watch.ui.layout.SlidingLayout
+        android:id="@+id/slidingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:sliding_mode="both"
+        app:background_view="@layout/view_bg">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8.0dip"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/sub_watch_setting" />
+        </ScrollView>
+    </com.duoker.watch.ui.layout.SlidingLayout>
+</LinearLayout>

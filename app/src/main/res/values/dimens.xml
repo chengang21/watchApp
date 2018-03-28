@@ -1,0 +1,97 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">1dp</dimen>
+    <dimen name="activity_vertical_margin">1dp</dimen>
+    <dimen name="toolbar_padding_top">0dip</dimen>
+    <dimen name="toolbar_item_padding">16.0dip</dimen>
+    <dimen name="toolbar_item_width">54.0dip</dimen>
+    <dimen name="toolbar_title_size">20.0sp</dimen>
+    <dimen name="actionBarSize">60dp</dimen>
+    <dimen name="menu_device_func_layout_padding_bottom">4.0dip</dimen>
+    <dimen name="menu_device_func_layout_padding_top">4.0dip</dimen>
+    <dimen name="menu_device_func_layout_margin_top">6.0dip</dimen>
+    <dimen name="menu_device_indicator_margin_bottom">10.0dip</dimen>
+    <dimen name="menu_device_arc_progress_height">150.0dip</dimen>
+    <dimen name="menu_device_arc_progress_width">150.0dip</dimen>
+
+    <dimen name="comp_item_check_mark_height">20.0dip</dimen>
+    <dimen name="comp_item_check_mark_margin_right">14.0dip</dimen>
+    <dimen name="comp_item_check_mark_width">20.0dip</dimen>
+    <dimen name="contacts_item_height">50.0dip</dimen>
+    <dimen name="contacts_item_padding_left_1">30.0dip</dimen>
+    <dimen name="contacts_item_textsize">18.0sp</dimen>
+    <dimen name="default_circle_indicator_radius">3.0dip</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1.0dip</dimen>
+    <dimen name="default_line_indicator_gap_width">4.0dip</dimen>
+    <dimen name="default_line_indicator_line_width">12.0dip</dimen>
+    <dimen name="default_line_indicator_stroke_width">1.0dip</dimen>
+    <dimen name="default_title_indicator_clip_padding">4.0dip</dimen>
+    <dimen name="default_title_indicator_footer_indicator_height">4.0dip</dimen>
+    <dimen name="default_title_indicator_footer_indicator_underline_padding">20.0dip</dimen>
+    <dimen name="default_title_indicator_footer_line_height">2.0dip</dimen>
+    <dimen name="default_title_indicator_footer_padding">7.0dip</dimen>
+    <dimen name="default_title_indicator_text_size">15.0dip</dimen>
+    <dimen name="default_title_indicator_title_padding">5.0dip</dimen>
+    <dimen name="default_title_indicator_top_padding">7.0dip</dimen>
+    <dimen name="design_appbar_elevation">4.0dip</dimen>
+    <dimen name="design_bottom_sheet_modal_elevation">16.0dip</dimen>
+    <dimen name="design_bottom_sheet_modal_peek_height">256.0dip</dimen>
+    <dimen name="design_fab_border_width">0.5dip</dimen>
+    <dimen name="design_fab_elevation">6.0dip</dimen>
+    <dimen name="design_fab_image_size">24.0dip</dimen>
+    <dimen name="design_fab_size_mini">40.0dip</dimen>
+    <dimen name="design_fab_size_normal">56.0dip</dimen>
+    <dimen name="design_fab_translation_z_pressed">6.0dip</dimen>
+    <dimen name="design_navigation_elevation">16.0dip</dimen>
+    <dimen name="design_navigation_icon_padding">32.0dip</dimen>
+    <dimen name="design_navigation_icon_size">24.0dip</dimen>
+    <dimen name="design_navigation_padding_bottom">8.0dip</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">8.0dip</dimen>
+    <dimen name="design_snackbar_elevation">6.0dip</dimen>
+    <dimen name="design_snackbar_padding_horizontal">12.0dip</dimen>
+    <dimen name="design_snackbar_padding_vertical">14.0dip</dimen>
+    <dimen name="design_snackbar_text_size">14.0sp</dimen>
+    <dimen name="design_tab_max_width">264.0dip</dimen>
+    <dimen name="design_tab_text_size">14.0sp</dimen>
+    <dimen name="design_tab_text_size_2line">12.0sp</dimen>
+    <dimen name="dialogplus_default_center_margin">16.0dip</dimen>
+    <item name="disabled_alpha_material_dark" type="dimen">0.3</item>
+    <item name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="height_actionsheet_title">40.0dip</dimen>
+    <dimen name="height_alert_button">48.0dip</dimen>
+    <dimen name="height_alert_title">60.0dip</dimen>
+    <item name="highlight_alpha_material_colored" type="dimen">0.26</item>
+    <item name="highlight_alpha_material_dark" type="dimen">0.2</item>
+    <item name="highlight_alpha_material_light" type="dimen">0.12</item>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
+
+    <dimen name="marginBottom_actionsheet_msg">14.0dip</dimen>
+    <dimen name="marginBottom_alert_msg">25.0dip</dimen>
+    <dimen name="margin_actionsheet_left_right">10.0dip</dimen>
+    <dimen name="margin_alert_left_right">40.0dip</dimen>
+    <dimen name="menu_item_height">50.0dip</dimen>
+    <dimen name="menu_item_imageview_height">24.0dip</dimen>
+    <dimen name="menu_item_imageview_width">24.0dip</dimen>
+    <dimen name="menu_item_left1">20.0dip</dimen>
+    <dimen name="menu_item_left2">20.0dip</dimen>
+    <dimen name="menu_item_right1">16.0dip</dimen>
+    <dimen name="menu_item_separator_line_left">30.0dip</dimen>
+    <dimen name="menu_item_textsize">18.0sp</dimen>
+
+    <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
+    <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_top">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_bottom">10dp</dimen>
+
+    <dimen name="ksw_md_thumb_solid_size">20dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_size">21dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines.
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>  -->
+
+</resources>

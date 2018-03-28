@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.duoker.watch.ui.view.MyToolbar
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/colorToolbar_bg"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/toolbar_menu_back"
+            android:layout_width="@dimen/toolbar_item_width"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/toolbar_item_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            style="@style/ToolbarStyle1.TitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/notification_messages_title" />
+    </com.duoker.watch.ui.view.MyToolbar>
+
+    <com.duoker.watch.ui.layout.SlidingLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:background_view="@layout/view_bg"
+        app:sliding_mode="both">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/system_msg_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_item_bg"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:background="@color/separator_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16.0dip"
+                            android:paddingTop="16.0dip">
+
+                            <ImageView
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="14.0dip"
+                                android:src="@drawable/icon_notification_system" />
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="60.0dip"
+                                android:layout_marginLeft="14.0dip"
+                                android:layout_marginRight="14.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/notification_messages_title_1"
+                                        android:textSize="16.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/system_msg_time_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="2分钟之前" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="14.0dip">
+
+                                    <TextView
+                                        android:id="@+id/system_msg_last_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:ellipsize="end"
+                                        android:maxEms="16"
+                                        android:singleLine="true"
+                                        android:text="谁做了些什么这是一串很长的文字但是我要截断它" />
+
+                                    <ImageView
+                                        android:id="@+id/system_msg_unread_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="50.0dip"
+                                        android:src="@drawable/hb_have_no_read_msg_dot" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sms_msg_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_item_bg"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:background="@color/separator_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16.0dip"
+                            android:paddingTop="16.0dip">
+
+                            <ImageView
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="14.0dip"
+                                android:src="@drawable/icon_notification_sms" />
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="60.0dip"
+                                android:layout_marginLeft="14.0dip"
+                                android:layout_marginRight="14.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/notification_messages_title_2"
+                                        android:textSize="16.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/sms_msg_time_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="2分钟之前" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="14.0dip">
+
+                                    <TextView
+                                        android:id="@+id/sms_msg_last_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:ellipsize="end"
+                                        android:maxEms="16"
+                                        android:singleLine="true"
+                                        android:text="谁做了些什么这是一串很长的文字但是我要截断它" />
+
+                                    <ImageView
+                                        android:id="@+id/sms_msg_unread_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="50.0dip"
+                                        android:src="@drawable/hb_have_no_read_msg_dot" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verify_msg_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_item_bg"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:background="@color/separator_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16.0dip"
+                            android:paddingTop="16.0dip">
+
+                            <ImageView
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="14.0dip"
+                                android:src="@drawable/icon_notification_verify" />
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="60.0dip"
+                                android:layout_marginLeft="14.0dip"
+                                android:layout_marginRight="14.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/notification_messages_title_3"
+                                        android:textSize="16.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/verify_msg_time_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="2分钟之前" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="14.0dip">
+
+                                    <TextView
+                                        android:id="@+id/verify_msg_last_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:ellipsize="end"
+                                        android:maxEms="16"
+                                        android:singleLine="true"
+                                        android:text="谁做了些什么这是一串很长的文字但是我要截断它" />
+
+                                    <ImageView
+                                        android:id="@+id/verify_msg_unread_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="50.0dip"
+                                        android:src="@drawable/hb_have_no_read_msg_dot" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/function_msg_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_item_bg"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:background="@color/separator_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16.0dip"
+                            android:paddingTop="16.0dip">
+
+                            <ImageView
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="14.0dip"
+                                android:src="@drawable/icon_notification_function" />
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="60.0dip"
+                                android:layout_marginLeft="14.0dip"
+                                android:layout_marginRight="14.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/notification_messages_title_4"
+                                        android:textSize="16.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/function_msg_time_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="2分钟之前" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="14.0dip">
+
+                                    <TextView
+                                        android:id="@+id/function_msg_last_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:ellipsize="end"
+                                        android:maxEms="16"
+                                        android:singleLine="true"
+                                        android:text="谁做了些什么这是一串很长的文字但是我要截断它" />
+
+                                    <ImageView
+                                        android:id="@+id/function_msg_unread_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="50.0dip"
+                                        android:src="@drawable/hb_have_no_read_msg_dot" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:background="@color/separator_line" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/no_data_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="12.0dip"
+                        android:gravity="center"
+                        android:text="@string/notify_msg_no_more_data"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+            </FrameLayout>
+        </ScrollView>
+    </com.duoker.watch.ui.layout.SlidingLayout>
+</LinearLayout>

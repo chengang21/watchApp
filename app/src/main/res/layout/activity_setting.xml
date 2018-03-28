@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lc_layout_default_bg"
+    android:orientation="vertical">
+
+    <com.duoker.watch.ui.view.MyToolbar
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/colorToolbar_bg">
+
+        <ImageView
+            android:id="@+id/toolbar_menu_back"
+            android:layout_width="@dimen/toolbar_item_width"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/toolbar_item_padding"
+            android:contentDescription="@string/back_text"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/toolbar_title_tv"
+            style="@style/ToolbarStyle1.TitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setup_title" />
+
+        <ImageView
+            android:id="@+id/toolbar_menu_exit"
+            android:layout_width="@dimen/toolbar_item_width"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/toolbar_item_padding"
+            android:contentDescription="@string/exit_text"
+            android:src="@drawable/hb_exit" />
+    </com.duoker.watch.ui.view.MyToolbar>
+
+    <com.duoker.watch.ui.layout.SlidingLayout
+        android:id="@+id/slidingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:background_view="@layout/view_bg"
+        app:sliding_mode="both">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/container_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </com.duoker.watch.ui.layout.SlidingLayout>
+</LinearLayout>

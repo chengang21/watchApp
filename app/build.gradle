@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application' // 声明是Android 程序
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'dk'
+            keyPassword 'chengang'
+            storeFile file('C:/cgdev/chengang/DK/cg4dk.jks')
+            storePassword 'chengang'
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    compileSdkVersion 25  // 编译SDK的版本
+    buildToolsVersion '25.0.0'  // build tools的版本
+    defaultConfig {
+        applicationId "com.duoker.watch"  // 应用的包名
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false  // 是否进行混淆
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config   // debug模式
+        }
+    }
+    //重要的是设置下源目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']//将so文件目录指向libs目录
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // 编译libs目录下的所有jar包
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // 编译junit目录下的junit模块
+    compile files('libs/AMap_3DMap_V4.0.1_20160923.jar')
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/Msc.jar')
+    // compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    compile project(':library')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'org.xutils:xutils:3.5.0'
+    compile 'com.squareup.okio:okio:1.12.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'homhomlin.lib:sldinglayout:0.9.0'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+    // compile 'com.kyleduo.switchbutton:library:1.4.6'
+    // compile 'pl.rspective.pagerdatepicker:pagerdatepicker:1.2.0'
+
+    testCompile 'junit:junit:4.12'
+}

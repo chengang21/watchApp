@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <LinearLayout
+            android:id="@+id/ssid_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="14.0dip"
+                android:gravity="center"
+                android:src="@drawable/hb_icon_wifi_off" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@color/separator_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ssid_view"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:hint="@string/watch_sets_wifi_ssid"
+                    android:paddingLeft="14.0dip"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="12.0dip"
+                    android:paddingRight="12.0dip"
+                    android:src="@drawable/icon_arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginTop="16.0dip"
+            android:background="@color/separator_line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="14.0dip"
+                android:gravity="center"
+                android:src="@drawable/hb_icon_pass" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@color/separator_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50.0dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pwd_view"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/watch_sets_wifi_pwd"
+                    android:inputType="textPassword"
+                    android:paddingLeft="14.0dip"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="12.0dip"
+                    android:paddingRight="12.0dip"
+                    android:src="@drawable/icon_arrow_right"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginTop="16.0dip"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/contacts_item_height"
+            android:background="@drawable/layout_item_bg3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="14.0dip"
+                android:paddingRight="14.0dip"
+                android:text="@string/watch_sets_wifi_enable"
+                android:textColor="#ff515050"
+                android:textSize="18.0sp" />
+
+            <com.duoker.watch.ui.view.SwitchButton
+                android:id="@+id/enable_tb"
+                android:layout_width="50.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:checked="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:textOff=""
+                android:textOn=""
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswBackMeasureRatio="1.6"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-8.0dip"
+                app:kswThumbMarginLeft="-5.0dip"
+                app:kswThumbMarginRight="-5.0dip"
+                app:kswThumbMarginTop="-2.5dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="24.0dip"
+            android:layout_marginRight="24.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/btn_bg"
+            android:text="@string/watch_sets_wifi_ok"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

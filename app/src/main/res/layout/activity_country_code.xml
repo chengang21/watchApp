@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lc_layout_default_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorToolbar_bg"
+        android:minHeight="@dimen/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            style="@style/ToolbarStyle1.TitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/country_code_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.duoker.watch.ui.view.sortlistview.ClearEditText
+            android:id="@+id/filter_et"
+            style="@style/EditTextTypeStyle4"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginTop="8.0dip"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:hint="@string/contacts_from_db_search"
+            android:textSize="16.0sp"
+            android:maxLines="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff3f3e9">
+
+            <ListView
+                android:id="@+id/lv1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:cacheColorHint="#ffffffff"
+                android:divider="@drawable/sortlistview_item_divider"
+                android:dividerHeight="1.0px"
+                android:fadingEdge="none"
+                android:scrollingCache="false" />
+
+            <TextView
+                android:id="@+id/toast_view"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/sortlistview_toast"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip"
+                android:visibility="invisible" />
+
+            <com.duoker.watch.ui.view.sortlistview.SideBar
+                android:id="@+id/sidebar"
+                android:layout_width="30.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center|right" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

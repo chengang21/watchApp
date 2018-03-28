@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/step_layout"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layout_item_bg"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="20.0dip">
+
+                    <ImageView
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:src="@drawable/home_more_step" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/config_watch_status" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/map_track_layout"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layout_item_bg"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="20.0dip"
+                    android:paddingTop="10.0dip">
+
+                    <ImageView
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:src="@drawable/home_more_track" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/config_watch_battery" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:id="@+id/config_unbind_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_item_height"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/menu_item_imageview_width"
+                    android:layout_height="@dimen/menu_item_imageview_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left1"
+                    android:src="@drawable/home_more_unbing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left2"
+                    android:text="@string/home_more_item_unbind_manage"
+                    android:textSize="@dimen/menu_item_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:src="@drawable/icon_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:id="@+id/config_watch_sets_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_item_height"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/menu_item_imageview_width"
+                    android:layout_height="@dimen/menu_item_imageview_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left1"
+                    android:src="@drawable/home_more_watch_setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left2"
+                    android:text="@string/home_more_item_watches_set"
+                    android:textSize="@dimen/menu_item_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:src="@drawable/icon_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+
+        <RelativeLayout
+            android:id="@+id/watch_wearer_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_item_height"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/menu_item_imageview_width"
+                    android:layout_height="@dimen/menu_item_imageview_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left1"
+                    android:src="@drawable/icon_main_blood_oxygen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left2"
+                    android:text="@string/config_set_watch_wearer"
+                    android:textSize="@dimen/menu_item_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:src="@drawable/icon_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+
+        <RelativeLayout
+            android:id="@+id/watch_reminder_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_item_height"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/menu_item_imageview_width"
+                    android:layout_height="@dimen/menu_item_imageview_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left1"
+                    android:src="@drawable/home_menu_remind" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/menu_item_left2"
+                    android:text="@string/config_set_watch_reminder"
+                    android:textSize="@dimen/menu_item_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/menu_item_right1"
+                android:src="@drawable/icon_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

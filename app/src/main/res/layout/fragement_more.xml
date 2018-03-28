@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lc_layout_default_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/toolbar_padding_top"
+            android:background="@color/colorPrimaryDark" />
+
+        <com.duoker.watch.ui.view.MyToolbar
+            android:id="@+id/toolbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorToolbar_bg"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/home_more_title"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+        </com.duoker.watch.ui.view.MyToolbar>
+
+        <!--cg-->
+        <android.support.v7.widget.Toolbar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/AppTheme.AppBarOverlay" >
+
+            <TextView
+                android:theme="@style/ToolbarStyle1.TitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/home_more_title"
+                android:textColor="#ff000000"
+                android:textSize="20sp"/>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.duoker.watch.ui.layout.SlidingLayout
+            android:id="@+id/slidingLayout"
+            app:sliding_mode="both"
+            app:background_view="@layout/view_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/fragement_more_list" />
+            </ScrollView>
+        </com.duoker.watch.ui.layout.SlidingLayout>
+
+        <include
+            android:id="@+id/no_watch_layout_more"
+            layout="@layout/sub_no_watch" />
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/toolbar_padding_top"
+            android:background="@color/gray" />
+
+        <com.duoker.watch.ui.view.MyToolbar
+            android:id="@+id/toolbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#f5f5f5"
+            >
+            <!-- android:theme="@style/AppTheme.AppBarOverlay" -->
+
+            <TextView
+                android:id="@+id/toolbar_menu_sure_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14.0dip"
+                android:padding="10.0dip"
+                android:text="@string/common_choose_sure"
+                android:textColor="#000"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:textSize = "20sp"
+                android:textColor = "#ff000000"
+                android:text="@string/main_item_notify" />
+
+            <!-- style="@style/ToolbarStyle1.TitleView" -->
+
+            <ImageView
+                android:id="@+id/toolbar_menu_add"
+                android:layout_width="@dimen/toolbar_item_width"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/toolbar_item_padding"
+                android:src="@drawable/hb_btn_add" />
+
+            <ImageView
+                android:id="@+id/toolbar_menu_del"
+                android:layout_width="@dimen/toolbar_item_width"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/toolbar_menu_add"
+                android:padding="@dimen/toolbar_item_padding"
+                android:src="@drawable/hb_btn_del" />
+        </com.duoker.watch.ui.view.MyToolbar>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/no_data_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/lc_layout_default_bg"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="12.0dip"
+                android:gravity="center"
+                android:text="@string/schedule_no_more_data"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.duoker.watch.ui.view.MultipleChoiceListView
+                android:id="@+id/lv1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/gray"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="20.0dip"
+                android:focusableInTouchMode="false"
+                android:listSelector="@android:color/transparent"
+                android:paddingBottom="20.0dip"
+                android:paddingTop="20.0dip"
+                android:visibility="gone" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/no_watch_layout"
+            layout="@layout/sub_no_watch" />
+    </RelativeLayout>
+</LinearLayout>

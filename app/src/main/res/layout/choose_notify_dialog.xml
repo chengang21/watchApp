@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="24.0dip"
+        android:paddingRight="24.0dip">
+
+        <RelativeLayout
+            android:id="@+id/mute_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mute_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dip"
+                android:maxLines="1"
+                android:text="@string/watch_sets_notify_mute"
+                android:textColor="#ff7d7d7d"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:id="@+id/select_mute_iv"
+                android:layout_width="@dimen/comp_item_check_mark_width"
+                android:layout_height="@dimen/comp_item_check_mark_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/comp_item_check_mark_margin_right"
+                android:src="@drawable/hb_icon_check_mark" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:id="@+id/shake_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/shake_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dip"
+                android:maxLines="1"
+                android:text="@string/watch_sets_notify_shake"
+                android:textColor="#ff7d7d7d"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:id="@+id/select_shake_iv"
+                android:layout_width="@dimen/comp_item_check_mark_width"
+                android:layout_height="@dimen/comp_item_check_mark_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/comp_item_check_mark_margin_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/separator_line" />
+
+        <RelativeLayout
+            android:id="@+id/shake_ring_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/layout_item_bg"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/shake_ring_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dip"
+                android:maxLines="1"
+                android:text="@string/watch_sets_notify_shake_ring"
+                android:textColor="#ff7d7d7d"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:id="@+id/select_shake_ring_iv"
+                android:layout_width="@dimen/comp_item_check_mark_width"
+                android:layout_height="@dimen/comp_item_check_mark_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/comp_item_check_mark_margin_right" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

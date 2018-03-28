@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <com.duoker.watch.ui.view.ArcProgress
+        android:id="@+id/step_count_progress"
+        android:layout_width="@dimen/menu_device_arc_progress_width"
+        android:layout_height="@dimen/menu_device_arc_progress_height"
+        android:layout_centerInParent="true"
+        app:ec_arc_angle="270.0"
+        app:ec_arc_content_text_color="#ffde5e5e"
+        app:ec_arc_content_text_size="46.0dip"
+        app:ec_arc_finished_color="#ff65cd33"
+        app:ec_arc_max="10000"
+        app:ec_arc_name_text=""
+        app:ec_arc_name_text_size="16.0dip"
+        app:ec_arc_other_text_color="@android:color/black"
+        app:ec_arc_stroke_width="12.0dip"
+        app:ec_arc_suffix_text="@string/step_count_record_now_go"
+        app:ec_arc_suffix_text_size="18.0dip"
+        app:ec_arc_target_text="@string/step_count_record_target_now"
+        app:ec_arc_target_text_size="16.0dip"
+        app:ec_arc_unfinished_color="@android:color/darker_gray" />
+</LinearLayout>

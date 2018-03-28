@@ -1,0 +1,4 @@
+// 主要声明一些需要加入 gradle 的module
+
+include ':app'
+include ':library'

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginLeft="10.0dip">
+
+            <CheckBox
+                android:id="@+id/muti_check_view"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:background="@drawable/btn_check_holo_light"
+                android:button="@null"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:paddingBottom="6.0dip" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26.0dip"
+                        android:background="@drawable/safe_area_layout_item_bg"
+                        android:orientation="vertical"
+                        android:paddingLeft="26.0dip">
+
+                        <TextView
+                            android:id="@+id/content_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="16.0sp" />
+
+                        <TextView
+                            android:id="@+id/time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6.0dip"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/week_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <com.duoker.watch.ui.view.SwitchButton
+                        android:id="@+id/enable_tb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:textOff=""
+                        android:textOn=""
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswBackMeasureRatio="1.6"
+                        app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                        app:kswThumbMarginBottom="-8.0dip"
+                        app:kswThumbMarginLeft="-5.0dip"
+                        app:kswThumbMarginRight="-5.0dip"
+                        app:kswThumbMarginTop="-2.5dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="36.0dip"
+                    android:layout_height="36.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8.0dip"
+                    android:background="@drawable/hb_schedule_item_circle">
+
+                    <TextView
+                        android:id="@+id/circle_week_desc_view"
+                        android:layout_width="36.0dip"
+                        android:layout_height="36.0dip"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
